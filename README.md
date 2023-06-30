@@ -13,7 +13,22 @@ Spotify currently offers a robust recommendation system whereby users receive re
 
 ## Data
 
-Song data was compiled using a dataset derived from the Spotify API. The database contained of over 1700 songs, and features mood data from Last.FM user-generated tags.
+The dataset used for this project was the Million Song Database. It contains metadata for one million songs. The metadata includes information such as artist, title, year, and genre. The dataset also contains audio features for each song. The audio features are extracted from the audio files using the Echo Nest analyzer. The audio features include information such as tempo, loudness, and key. The dataset also contains lyrics for each song. The lyrics are extracted from the audio files using the Musixmatch analyzer. The lyrics are stored as a bag of words. The dataset is stored in HDF5 format. The dataset is 280 GB uncompressed. The dataset is available for download at http://millionsongdataset.com/. The dataset is also available on AWS S3 at s3://millionsongdataset/. 
+
+The Million Song Dataset is a freely-available collection of audio features and metadata for a million contemporary popular music tracks. The Million Song Dataset started as a collaborative project between The Echo Nest and LabROSA. It was supported in part by the NSF. 
+
+Its purposes are:
+
+    To encourage research on algorithms that scale to commercial sizes
+    To provide a reference dataset for evaluating research
+    As a shortcut alternative to creating a large dataset with APIs (e.g. The Echo Nest's)
+    To help new researchers get started in the MIR field
+
+The core of the dataset is the feature analysis and metadata for one million songs, provided by The Echo Nest. 
+
+Thierry Bertin-Mahieux, Daniel P.W. Ellis, Brian Whitman, and Paul Lamere. 
+The Million Song Dataset. In Proceedings of the 12th International Society
+for Music Information Retrieval Conference (ISMIR 2011), 2011.
 
 ## Methods
 
