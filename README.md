@@ -3,7 +3,7 @@
 **Authors:** James Meredith
 ***
 
-![img](images\sara-kurfess-wXU9yeANElg-unsplash.jpg)
+![img](./images/sara-kurfess-wXU9yeANElg-unsplash.jpg)
 
 ## Overview
 
