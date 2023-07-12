@@ -1,4 +1,4 @@
-# Music Mood Detection Using Spotify Audio Features
+# Music Recommendation System with Mood Detection Using The Million Song Dataset
 
 **Authors:** James Meredith
 ***

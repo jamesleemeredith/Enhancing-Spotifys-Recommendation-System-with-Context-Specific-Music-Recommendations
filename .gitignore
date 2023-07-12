@@ -1,2 +1,5 @@
 data/
 code/
+spotifyusercredentials.py
+.cache
+__pycache__/spotifyusercredentials.cpython-310.pyc
