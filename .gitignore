@@ -1,5 +1,8 @@
-data/
+data/lastfm_subset/
+data/MillionSongSubset/
+data/train_triplets.zip
 code/
 spotifyusercredentials.py
 .cache
 __pycache__/spotifyusercredentials.cpython-310.pyc
+streamlit_tester.ipynb
