@@ -1,32 +1,32 @@
-# Music Recommendation System with Mood Detection Using The Million Song Dataset
+# Enhancing Spotify's Recommendation System with Context-Specific Music Recommendations
 
-**Authors:** James Meredith
+**Author:** James Meredith
+
+**Instructor:** David Elliot
+
+**Institution:** Flatiron School
+
+Active Project Dates: Jun 267th, 2023 - July 14th, 2023
+
 ***
 
 ![img](./images/sara-kurfess-wXU9yeANElg-unsplash.jpg)
 
-## Overview
+## Abstract
 
-The purpose of this Data Science project was to develop an automated Machine Learning model for the detection of a song's dominant mood based on it's audio features. The impetus behind conception of this project was to create a way for the Spotify recommendation system to implement mood-based contextual recommendation into the current recommendation system. The current recommendation system does a pretty good job of utilizing users past listening habits to recommend them songs they enjoy, but it lacks the context specificity to recommend songs appropriate to a user’s given mood. For example, I don’t want Spotify to include sad songs in my recommended playlist when I’m at the gym, or fast-paced techno music when I’m trying to fall asleep. So the goal of this project was to create an automated mood detection algorithm to be integrated into the current recommendation system, so users could simply say “Hey Spotify! Build me a playlist that matches my mood right now.” and Spotify does it. Song data was compiled from the Spotify API and emotion data used to train the model came from Last.FM user-generated tags. The data was then used to train a machine learning algorithm in order to build the detection model.  The logistic regression model had an accuracy score of 0.54. The decision tree model was also able to predict the dominant mood of a song with a 0.45 accuracy score. After tuning both models further, the decision tree model was able to achieve an accuracy score of 0.85, and the logistic regression model was able to achieve an accuracy score of 0.55. The decision tree model was also able to predict the dominant mood of a song with a 0.46 accuracy score. Based on the analysis, the author recommends the use of audio feature data to predict the dominant mood of a song. The author also recommends the use of a decision tree model to predict the dominant mood of a song based on it's audio features. The author does not recommend the use of a logistic regression model to predict the dominant mood of a song based on it's audio features.
+This project focuses on the business problem of enhancing Spotify's recommendation system by incorporating context-specific music recommendations based on a user's mood. By developing an automated mood detection algorithm and integrating it into the existing recommendation system, users will be able to effortlessly generate playlists tailored to their current emotional state. The dataset used for this project was the Million Song Dataset. It contains metadata for one million songs. The metadata includes information such as artist, title, year, and genre. The dataset also contains audio features for each song. The dataset is available for download at http://millionsongdataset.com/. The dataset was used to train a machine learning algorithm in order to build the mood detection model, and then used to automatically label the mood of each song in the dataset for utilization in the recommendation system. The detection model was created using an iterative approach that compared the accuracy and efficiency of several different machine learning models against a baseline dummy model. Pipelines were used to efficiently process the data for each model. The models were then tuned using GridSearchCV to find the optimal hyperparameters for each model. The models were then evaluated using accuracy scores and confusion matrices. Ultimately, SVD was the model selected. After tuning the hyperparameters, an accuracy score of 0.58 was produced. Limitations in the size of the training dataset are the likely cause of the accuracy score, and future plans to improve the model accuracy are planned. Based on the analysis, the author recommends the use of audio feature data to predict the dominant mood of a song for easy automated labeling, and then to use that data to enhance Spotify's recommendation system with context-specific music recommendations. 
 
 ## Business Problem
 
-Spotify currently offers a robust recommendation system whereby users receive recommendations for music they might like based on their past listening habits. However, Spotify does not currently offer a feature whereby users can request music based on their current mood. The purpose of this project is to develop a model that can predict the dominant mood of a song based on it's audio features, and then to use that model to develop a recommendation system for users to request music based on their current mood. The target audience for this project is Spotify, and the goal is to develop a model that can be integrated into the current recommendation system to allow users to request music based on their current mood.
+Recommendation systems have revolutionized the way digital content is discovered and consumed. In the realm of music streaming, Spotify has emerged as a dominant player, boasting an extensive user base and impressive streaming statistics. As of September 2021, Spotify has over 365 million active users, including more than 165 million subscribers worldwide. With a vast music library comprising over 70 million tracks, Spotify provides users with an unparalleled selection of songs across various genres and languages. However, while Spotify's recommendation system effectively utilizes users' past listening habits to suggest songs they may enjoy, it falls short in delivering context-specific recommendations aligned with a user's mood at any given moment. This project focuses on the business problem of enhancing Spotify's recommendation system by incorporating context-specific music recommendations based on a user's mood. By developing an automated mood detection algorithm and integrating it into the existing recommendation system, users will be able to effortlessly generate playlists tailored to their current emotional state, and this project provides a proof of concept for how this can be achieved.
 
 ## Data
 
-The dataset used for this project was the Million Song Database. It contains metadata for one million songs. The metadata includes information such as artist, title, year, and genre. The dataset also contains audio features for each song. The audio features are extracted from the audio files using the Echo Nest analyzer. The audio features include information such as tempo, loudness, and key. The dataset also contains lyrics for each song. The lyrics are extracted from the audio files using the Musixmatch analyzer. The lyrics are stored as a bag of words. The dataset is stored in HDF5 format. The dataset is 280 GB uncompressed. The dataset is available for download at http://millionsongdataset.com/. The dataset is also available on AWS S3 at s3://millionsongdataset/. 
+The dataset used for this project was the Million Song Database. The Million Song Dataset was designed to promote machine learning models on industry-sized data, and started as a collaborative project between LabROSA, a research team at Columbia University, and The Echo Nest. It’s a freely-available collection of audio features and metadata for a million contemporary popular music tracks. In 2014 the Echonest was purchased by Spotify, and data from the project lives on in the current recommendation systems at Spotify, so I felt it was a fitting dataset for the project. The Million Song Dataset contains a variety of different metadata and audio feature data, but in particular I used the core dataset for the audio features, the Last.fm Dataset for genre and emotion tags, and the Echo Nest Taste Profile Subset to train the recommendation system. It should be noted that the full dataset is 280 GB uncompressed, so due to hardware constraints I used a subset of the data for this project, a much more modest 2.5 GB. 
 
-The Million Song Dataset is a freely-available collection of audio features and metadata for a million contemporary popular music tracks. The Million Song Dataset started as a collaborative project between The Echo Nest and LabROSA. It was supported in part by the NSF. 
+The dataset is available for download at http://millionsongdataset.com/. The dataset is also available on AWS S3 at s3://millionsongdataset/.
 
-Its purposes are:
-
-    To encourage research on algorithms that scale to commercial sizes
-    To provide a reference dataset for evaluating research
-    As a shortcut alternative to creating a large dataset with APIs (e.g. The Echo Nest's)
-    To help new researchers get started in the MIR field
-
-The core of the dataset is the feature analysis and metadata for one million songs, provided by The Echo Nest. 
+Attributions for the dataset is as follows:
 
 Thierry Bertin-Mahieux, Daniel P.W. Ellis, Brian Whitman, and Paul Lamere. 
 The Million Song Dataset. In Proceedings of the 12th International Society
@@ -34,43 +34,13 @@ for Music Information Retrieval Conference (ISMIR 2011), 2011.
 
 ## Methods
 
-Songs were tagged with one of 4 moods: happy, sad, angry, and calm. The data was then split into a training set and a test set, with the training set containing 80% of the data, and the test set containing 20% of the data. The training set was used to train the model, and the test set was used to test the model. The data was then used to train a machine learning algorithm in order to build the detection model. The detection model was created using an iterative approach that compared the accuracy and efficiency of several different machine learning models against a baseline dummy model. Pipelines were used to efficiently process the data for each model. The models were then tuned using GridSearchCV to find the optimal hyperparameters for each model. The models were then evaluated using accuracy scores and confusion matrices.
+Songs were tagged with one of 4 moods: happy, sad, angry, and calm. The data was then split into a training set and a test set, with the training set containing 85% of the data, and the test set containing 15% of the data. The training set was used to train the model, and the test set was used to test the model. The data was then used to train a machine learning algorithm in order to build the detection model. The detection model was created using an iterative approach that compared the accuracy and efficiency of several different machine learning models against a baseline dummy model. Pipelines were used to efficiently process the data for each model. The models were then tuned using GridSearchCV to find the optimal hyperparameters for each model. The models were then evaluated using accuracy scores and confusion matrices. Ultimately, SVD was the model selected. After tuning the hyperparameters, an accuracy score of 0.58 was produced. Limitations in the size of the training dataset are the likely cause of the accuracy score, and future plans to improve the model accuracy are planned. The data was then used to automatically label the mood of each song in the dataset for utilization in the recommendation system.
 
 ## Results
 
-Results of the baseline dummy model showed an accuracy score of 0.25. A quick comparison of 9 potential alternative models was conducted, where it was revealed that decision trees, gradiant boosting, and random forest algorithms were the top 3 models by accuracy. Cross-validated accuracy scores and confusion matrices for each of the four models is displayed below:
+Results of the baseline dummy model showed an accuracy score of 0.33. The accuracy score of the SVD model was 0.58. The confusion matrix for the SVD model is shown below.
 
-### Cross-Validated Accuracy Scores for Baseline Dummy Model:
-![Baseline Dummy Model Accuracy Scores](./images/dummy_model_cv_results.png)
-
-### Confusion Matrix for Baseline Dummy Model:
-![Baseline Dummy Model Confusion Matrix](./images/baseline_dummy_cm.png)
-
-### Cross-Validated Accuracy Scores for Baseline Decision Tree Model:
-![Baseline Decision Tree Accuracy Scores](./images/baseline_dt_cv_results.png)
-
-### Confusion Matrix for Baseline Decision Tree Model:
-![Baseline Decision Tree Confusion Matrix](./images/baseline_dt_cm.png)
-
-### Cross-Validated Accuracy Scores for Baseline Gradient Boosting Model:
-![Baseline Gradiant Booting Accuracy Scores](./images/baseline_gb_cv_results.png)
-
-### Confusion Matrix for Baseline Gradient Boosting Model:
-![Baseline Gradiant Booting Confusion Matrix](./images/baseline_dt_cm.png)
-
-### Cross-Validated Accuracy Scores for Baseline Random Forest Model:
-![Baseline Random Forest Accuracy Scores](./images/baseline_rf_cv_results.png)
-
-### Confusion Matrix for Baseline Random Forest Model:
-![Baseline Random Forest Confusion Matrix](./images/baseline_rf_cm.png)
-
-Based on the results of the baseline models, the decision tree model was selected for further tuning. The decision tree model was tuned using GridSearchCV to find the optimal hyperparameters for the model. The tuned model was then evaluated using accuracy scores and a confusion matrix.
-
-### Cross-Validated Accuracy Scores for Tuned Decision Tree Model:
-![Tuned Decision Tree Accuracy Scores](./images/tuned_rf_cv_results.png)
-
-### Confusion Matrix for Tuned Decision Tree Model:
-![Tuned Decision Tree Confusion Matrix](./images/tuned_rf_cm.png)
+![img](./images/confusion_matrix.png)
 
 ## Conclusions
 
@@ -78,9 +48,9 @@ Based on the analysis, the author recommends the use of audio feature data to pr
 
 ## For More Information
 
-Please review the full analysis in [the Jupyter Notebook](./music_mood_detection_model.ipynb) or [the presentation](./presentation.pdf).
+Please review the full analysis in [the Jupyter Notebook](./full_analysis.ipynb) or [the presentation](./presentation.pdf).
 
-For any additional questions, please contact James Meredith at <jam637.jlm@gmail.com>.
+For any additional questions, please contact James Meredith at <jam637.jlm@gmail.com>, or at [LinkedIn](https://www.linkedin.com/in/jamesleemeredith/).
 
 ## Repository Structure
 
@@ -88,6 +58,9 @@ For any additional questions, please contact James Meredith at <jam637.jlm@gmail
 ├── data
 ├── images
 ├── .gitignore
+├── app.py
+├── full_analysis.ipynb
+├── presentation.pdf
 ├── README.md
-└── music_mood_detection_model.ipynb
+└── updates_msd_audio_features.ipynb
 ```
