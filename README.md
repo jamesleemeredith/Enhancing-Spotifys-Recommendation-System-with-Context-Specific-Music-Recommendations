@@ -50,7 +50,7 @@ Based on the analysis, the author recommends the use of audio feature data to pr
 
 Please review the full analysis in [the Jupyter Notebook](./full_analysis.ipynb) or [the presentation](./presentation.pdf).
 
-For any additional questions, please contact James Meredith at <jam637.jlm@gmail.com>, or at [LinkedIn](https://www.linkedin.com/in/jamesleemeredith/).
+For any additional questions, please contact James Meredith at <jam637.jlm@gmail.com>, or on [LinkedIn](https://www.linkedin.com/in/jamesleemeredith/).
 
 ## Repository Structure
 
